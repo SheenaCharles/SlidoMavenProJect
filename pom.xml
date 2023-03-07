@@ -86,8 +86,8 @@
 <!--                    <version>2.22.1</version>-->
                     <configuration>
                         <suiteXmlFiles>
-<!--                            <suiteXmlFile>regression.xml</suiteXmlFile>-->
-                            <suiteXmlFile>${XMLSuite}</suiteXmlFile>
+                            <suiteXmlFile>src/test/testSuite/regression.xml</suiteXmlFile>
+<!--                            <suiteXmlFile>${XMLSuite}</suiteXmlFile>-->
                         </suiteXmlFiles>
                     </configuration>
                 </plugin>
