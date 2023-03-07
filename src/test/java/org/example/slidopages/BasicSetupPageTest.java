@@ -34,14 +34,23 @@ public class BasicSetupPageTest extends ConfigReader {
         if(platform.equalsIgnoreCase("local")) {
             try {
                 if (browser.equalsIgnoreCase("chrome")) {
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+//                    WebDriverManager.chromedriver().setup();
+//                    driver = new ChromeDriver();
+                    ChromeOptions options=new ChromeOptions();
+                    options.addArguments("--headless");
+                    driver=new ChromeDriver(options);
                 } else if (browser.equalsIgnoreCase("firefox")) {
-                    WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
+//                    WebDriverManager.firefoxdriver().setup();
+//                    driver = new FirefoxDriver();
+                    FirefoxOptions options=new FirefoxOptions();
+                    options.addArguments("--headless");
+                    driver = new FirefoxDriver(options);
                 } else if (browser.equalsIgnoreCase("edge")) {
-                    WebDriverManager.edgedriver().setup();
-                    driver = new EdgeDriver();
+//                    WebDriverManager.edgedriver().setup();
+//                    driver = new EdgeDriver();
+                    EdgeOptions options=new EdgeOptions();
+                    options.addArguments("--headless");
+                    driver = new EdgeDriver(options);
                 } else {
                     System.out.println("The Browser type is Undefined");
                 }
