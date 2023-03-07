@@ -72,6 +72,11 @@
                     <include name="testFromAdminPageTest"/>
                 </methods>
             </class>
+            <class name="org.example.slidopages.ScreenShotsTest">
+                <methods>
+                    <include name="screenShotPageTest"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
