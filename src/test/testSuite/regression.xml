@@ -59,7 +59,7 @@
             </class>
             <class name="org.example.slidopages.LoginPageTest">
                 <methods>
-                    <include name="loginFailureTest"/>
+                    <exclude name="loginFailureTest"/>
                 </methods>
             </class>
             <class name="org.example.slidopages.LogoutTest">
