@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Anand Sambanthan/Desktop/Java Programming/Slido">
+        <classes>
+            <class name="org.example.slidopages.NewSlidoPageTest">
+                <methods>
+                    <include name="copySlidoEventLinkTest"/>
+                    <include name="downloadSlidoEventQRCodeTest"/>
+                    <include name="inviteCollaboratorsTest"/>
+                    <include name="editEventNameTest"/>
+                    <include name="editEventCodeTest"/>
+                    <include name="editEventDateTest"/>
+                    <include name="copyEventLinkInSettingsTest"/>
+                    <include name="editLocationInSettingsTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.LivePollsTest">
+                <methods>
+                    <include name="createMultipleChoicePollTest"/>
+                    <include name="runMultipleChoicePollInPresentTest"/>
+                    <include name="createWordCloudPollTest"/>
+                    <include name="createQuizPollTest"/>
+                    <include name="createRatingPollTest"/>
+                    <include name="createOpenTextPollTest"/>
+                    <include name="createRankingPollTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.EventCodeTest">
+                <methods>
+                    <include name="checkEventCodeIsValidTest"/>
+                    <include name="checkEventCodeIsInValidTest"/>
+                    <include name="chooseAnswerOptionOneInMultiChoicePollAsParticipantTest"/>
+                    <include name="chooseAnswerOptionTwoInMultiChoicePollAsParticipantTest"/>
+                    <include name="chooseAnswerOptionThreeInMultiChoicePollAsParticipantTest"/>
+                    <include name="chooseAnswerOptionFourInMultiChoicePollAsParticipantTest"/>
+                    <include name="sendWordInWordCloudPollAsParticipantOneTest"/>
+                    <include name="sendWordInWordCloudPollAsParticipantTwoTest"/>
+                    <include name="chooseAnswerOptionOneInQuizPollAsParticipantTest"/>
+                    <include name="chooseAnswerOptionTwoInQuizPollAsParticipantTest"/>
+                    <include name="chooseAnswerOptionThreeInQuizPollAsParticipantTest"/>
+                    <include name="giveRatingOneInRatingPollAsParticipantTest"/>
+                    <include name="giveRatingTwoInRatingPollAsParticipantTest"/>
+                    <include name="giveRatingThreeInRatingPollAsParticipantTest"/>
+                    <include name="giveRatingFourInRatingPollAsParticipantTest"/>
+                    <include name="giveRatingFiveInRatingPollAsParticipantTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.EventsPageTest">
+                <methods>
+                    <include name="openInParticipantModeTest"/>
+                    <include name="openInPresentModeTest"/>
+                    <include name="openEventTest"/>
+                    <include name="shareAccessTest"/>
+                    <include name="duplicateEventTest"/>
+                    <include name="createNewSlidoInEventsPageTest"/>
+                    <include name="deleteEventTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.LoginPageTest">
+                <methods>
+                    <include name="loginFailureTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.LogoutTest">
+                <methods>
+                    <include name="logoutTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.TestingFromAdminPageTest">
+                <methods>
+                    <include name="testFromAdminPageTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
