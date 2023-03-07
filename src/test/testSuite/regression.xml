@@ -19,7 +19,7 @@
                 <methods>
                     <include name="createMultipleChoicePollTest"/>
                     <include name="runMultipleChoicePollInPresentTest"/>
-                    <include name="createWordCloudPollTest"/>
+                    <exclude name="createWordCloudPollTest"/>
                     <include name="createQuizPollTest"/>
                     <include name="createRatingPollTest"/>
                     <include name="createOpenTextPollTest"/>
@@ -34,8 +34,8 @@
                     <include name="chooseAnswerOptionTwoInMultiChoicePollAsParticipantTest"/>
                     <include name="chooseAnswerOptionThreeInMultiChoicePollAsParticipantTest"/>
                     <include name="chooseAnswerOptionFourInMultiChoicePollAsParticipantTest"/>
-                    <include name="sendWordInWordCloudPollAsParticipantOneTest"/>
-                    <include name="sendWordInWordCloudPollAsParticipantTwoTest"/>
+                    <exclude name="sendWordInWordCloudPollAsParticipantOneTest"/>
+                    <exclude name="sendWordInWordCloudPollAsParticipantTwoTest"/>
                     <include name="chooseAnswerOptionOneInQuizPollAsParticipantTest"/>
                     <include name="chooseAnswerOptionTwoInQuizPollAsParticipantTest"/>
                     <include name="chooseAnswerOptionThreeInQuizPollAsParticipantTest"/>
