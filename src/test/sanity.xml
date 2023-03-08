@@ -3,18 +3,18 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Anand Sambanthan/Desktop/Java Programming/Slido">
         <classes>
-<!--            <class name="org.example.slidopages.NewSlidoPageTest">-->
-<!--                <methods>-->
-<!--                    <include name="copySlidoEventLinkTest"/>-->
-<!--                    <include name="downloadSlidoEventQRCodeTest"/>-->
-<!--                    <include name="inviteCollaboratorsTest"/>-->
-<!--                    <include name="editEventNameTest"/>-->
-<!--                    <include name="editEventCodeTest"/>-->
-<!--                    <include name="editEventDateTest"/>-->
-<!--                    <include name="copyEventLinkInSettingsTest"/>-->
-<!--                    <include name="editLocationInSettingsTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name="org.example.slidopages.NewSlidoPageTest">
+                <methods>
+                    <include name="copySlidoEventLinkTest"/>
+                    <include name="downloadSlidoEventQRCodeTest"/>
+                    <include name="inviteCollaboratorsTest"/>
+                    <include name="editEventNameTest"/>
+                    <include name="editEventCodeTest"/>
+                    <include name="editEventDateTest"/>
+                    <include name="copyEventLinkInSettingsTest"/>
+                    <include name="editLocationInSettingsTest"/>
+                </methods>
+            </class>
 <!--        <class name="org.example.slidopages.LivePollsTest">-->
 <!--            <methods>-->
 <!--                <include name="createWordCloudPollTest"/>-->
@@ -26,26 +26,6 @@
 <!--                <include name="createRankingPollTest"/>-->
 <!--            </methods>-->
 <!--        </class>-->
-            <class name="org.example.slidopages.EventCodeTest">
-                <methods>
-                    <include name="sendWordInWordCloudPollAsParticipantOneTest"/>
-                    <include name="sendWordInWordCloudPollAsParticipantTwoTest"/>
-                    <include name="checkEventCodeIsValidTest"/>
-                    <include name="checkEventCodeIsInValidTest"/>
-                    <include name="chooseAnswerOptionOneInMultiChoicePollAsParticipantTest"/>
-                    <include name="chooseAnswerOptionTwoInMultiChoicePollAsParticipantTest"/>
-                    <include name="chooseAnswerOptionThreeInMultiChoicePollAsParticipantTest"/>
-                    <include name="chooseAnswerOptionFourInMultiChoicePollAsParticipantTest"/>
-                    <include name="chooseAnswerOptionOneInQuizPollAsParticipantTest"/>
-                    <include name="chooseAnswerOptionTwoInQuizPollAsParticipantTest"/>
-                    <include name="chooseAnswerOptionThreeInQuizPollAsParticipantTest"/>
-                    <include name="giveRatingOneInRatingPollAsParticipantTest"/>
-                    <include name="giveRatingTwoInRatingPollAsParticipantTest"/>
-                    <include name="giveRatingThreeInRatingPollAsParticipantTest"/>
-                    <include name="giveRatingFourInRatingPollAsParticipantTest"/>
-                    <include name="giveRatingFiveInRatingPollAsParticipantTest"/>
-                </methods>
-            </class>
 <!--            <class name="org.example.slidopages.EventsPageTest">-->
 <!--                <methods>-->
 <!--                    <include name="openInParticipantModeTest"/>-->

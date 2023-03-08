@@ -86,7 +86,7 @@
 <!--                    <version>2.22.1</version>-->
                     <configuration>
                         <suiteXmlFiles>
-                            <suiteXmlFile>src/test/testSuite/regression.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/testSuite/sanity.xml</suiteXmlFile>
 <!--                            <suiteXmlFile>${XMLSuite}</suiteXmlFile>-->
                         </suiteXmlFiles>
                     </configuration>
