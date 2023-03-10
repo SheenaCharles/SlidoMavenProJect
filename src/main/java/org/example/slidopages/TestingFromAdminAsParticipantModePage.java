@@ -41,16 +41,18 @@ public class TestingFromAdminAsParticipantModePage extends BasicSetupPage {
     @FindBy(css = "#app > div:nth-child(6) > div > div > div > form > div > button.btn-primary")
     protected WebElement sendButton;
 
+    @FindBy(css = "div.ep-participant__iframe")
+    protected WebElement participantModeFrame;
 
     public TestingFromAdminAsParticipantModePage(WebDriver driver) {
         super(driver);
     }
 
-    public boolean checkPollIsPresentInParticipantMode(String question) {
+    public boolean checkPollIsPresentInParticipantMode() {
         clickOnElement(secondSlidoEvent);
         clickOnElement(participantModeButton);
         pauseScreen();
-        return driver.getCurrentUrl().contains("event");
+        return participantModeFrame.isDisplayed();
     }
 
     public boolean editResponseToPollInParticipantMode() {

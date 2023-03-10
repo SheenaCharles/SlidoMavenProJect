@@ -77,8 +77,8 @@ public class NewSlidoPage extends BasicSetupPage {
     @FindBy(css = "input[data-placeholder='Location']")
     protected WebElement locationInputInSettings;
 
-    String downloadedFilePath = "C:\\Users\\Anand Sambanthan\\Desktop\\Java Programming\\gitpractice\\SlidoMavenProject\\src\\screenshots\\QR Code for Digital Gatherings.png";
-//    String downloadedFilePath = "C:\\Users\\Anand Sambanthan\\Downloads\\QR Code for Digital Gatherings.png";
+//    String downloadedFilePath = "C:\\Users\\Anand Sambanthan\\Desktop\\Java Programming\\gitpractice\\SlidoMavenProject\\src\\screenshots\\QR Code for Digital Gatherings.png";
+    String downloadedFilePath = "C:\\Users\\Anand Sambanthan\\Downloads\\QR Code for Digital Gatherings.png";
     File downloadedFile = new File(downloadedFilePath);
 
     public NewSlidoPage(WebDriver driver) {
@@ -139,6 +139,7 @@ public class NewSlidoPage extends BasicSetupPage {
         enterText(emailInputInInviteCollaboratorsOption, email);
         clickOnElement(inviteButtonInInviteCollaboratorsOption);
         clickOnElement(saveButtonInInviteCollaboratorsOption);
+        pauseScreen();
         return driver.getPageSource().contains("Successfully saved!");
     }
 
@@ -166,6 +167,7 @@ public class NewSlidoPage extends BasicSetupPage {
         enterText(eventStartDateInput, startDate);
         enterText(eventEndDateInput, endDate);
         clickOnElement(saveButton);
+        pauseScreen();
         return driver.getPageSource().contains("Successfully saved!");
     }
 
@@ -174,6 +176,7 @@ public class NewSlidoPage extends BasicSetupPage {
         clickOnElement(settingsIcon);
         pauseScreen();
         clickOnElement(copyLinkInSettings);
+        pauseScreen();
         return driver.getPageSource().contains("Copied!");
     }
 
@@ -183,6 +186,7 @@ public class NewSlidoPage extends BasicSetupPage {
         clickOnElement(showAdditionalSettings);
         enterText(locationInputInSettings, location);
         clickOnElement(saveButton);
+        pauseScreen();
         return driver.getPageSource().contains("Successfully saved!");
     }
 }

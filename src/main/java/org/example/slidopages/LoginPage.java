@@ -29,9 +29,13 @@ public class LoginPage extends BasicSetupPage {
 
     String expectedURL = "https://admin.sli.do/events";
 
-    public void doLogin(String email, String password) {
+    public void doLogin() {
         LoginButtonInDashboard.click();
-        acceptAllCookiesButton.click();
+    }
+
+    public void doLoginWithCredentials(String email, String password) {
+        LoginButtonInDashboard.click();
+//        acceptAllCookiesButton.click();
         enterText(emailInput, email);
         continueButton.click();
         enterText(passwordInput, password);
@@ -39,7 +43,6 @@ public class LoginPage extends BasicSetupPage {
     }
 
     public boolean doLoginWithWrongCredentials(String email, String password) {
-        openNewTab("https://www.slido.com/");
         LoginButtonInDashboard.click();
         acceptAllCookiesButton.click();
         enterText(emailInput, email);

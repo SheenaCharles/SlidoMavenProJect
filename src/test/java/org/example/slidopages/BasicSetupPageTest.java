@@ -1,5 +1,6 @@
 package org.example.slidopages;
 import dataProvider.ConfigReader;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,14 +19,14 @@ import java.util.concurrent.TimeUnit;
 public class BasicSetupPageTest extends ConfigReader {
 
     protected static WebDriver driver;
-//    String platform = System.getenv("platform");
-//    String browser= System.getenv("browser");
-//    String osOption = System.getenv("os");
-//    String version = System.getenv("version");
-    String platform = System.getProperty("platform");
-    String browser = System.getProperty("browser");
-    String os = System.getProperty("os");
-    String version = System.getProperty("version");
+    String platform = System.getenv("platform");
+    String browser= System.getenv("browser");
+    String os = System.getenv("os");
+    String version = System.getenv("version");
+//    String platform = System.getProperty("platform");
+//    String browser = System.getProperty("browser");
+//    String os = System.getProperty("os");
+//    String version = System.getProperty("version");
     protected URL url;
 
     @BeforeMethod
@@ -36,19 +37,22 @@ public class BasicSetupPageTest extends ConfigReader {
 //                    WebDriverManager.chromedriver().setup();
 //                    driver = new ChromeDriver();
                     ChromeOptions options=new ChromeOptions();
-                    options.addArguments("--headless");
+//                    options.addArguments("--headless");
+                    options.addArguments("user-data-dir=C:\\Users\\Anand Sambanthan\\AppData\\Local\\Googl\\Chrome\\User");
                     driver=new ChromeDriver(options);
                 } else if (browser.equalsIgnoreCase("firefox")) {
 //                    WebDriverManager.firefoxdriver().setup();
 //                    driver = new FirefoxDriver();
                     FirefoxOptions options=new FirefoxOptions();
-                    options.addArguments("--headless");
+                    options.addArguments("user-data-dir=C:\\Users\\Anand Sambanthan\\AppData\\Local\\Googl\\Chrome\\User");
+//                    options.addArguments("--headless");
                     driver = new FirefoxDriver(options);
                 } else if (browser.equalsIgnoreCase("edge")) {
 //                    WebDriverManager.edgedriver().setup();
 //                    driver = new EdgeDriver();
                     EdgeOptions options=new EdgeOptions();
-                    options.addArguments("--headless");
+                    options.addArguments("user-data-dir=C:\\Users\\Anand Sambanthan\\AppData\\Local\\Googl\\Chrome\\User");
+//                    options.addArguments("--headless");
                     driver = new EdgeDriver(options);
                 } else {
                     System.out.println("The Browser type is Undefined");
@@ -57,7 +61,8 @@ public class BasicSetupPageTest extends ConfigReader {
                 driver.get(getBaseUrl());
                 driver.manage().window().maximize();
                 LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-                loginPage.doLogin(getEmail(), getPassword());
+                //loginPage.doLoginWithCredentials(getEmail(), getPassword());
+                loginPage.doLogin();
             } catch (NullPointerException e) {
                 throw new RuntimeException(e);
             } catch (Exception e) {

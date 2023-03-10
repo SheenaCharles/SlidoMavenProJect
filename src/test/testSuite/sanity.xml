@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="C:/Users/Anand Sambanthan/Desktop/Java Programming/Slido">
+    <test verbose="6" preserve-order="true" name="">
         <classes>
-            <class name="org.example.slidopages.NewSlidoPageTest">
-                <methods>
-                    <include name="copySlidoEventLinkTest"/>
-                    <include name="downloadSlidoEventQRCodeTest"/>
-                    <include name="inviteCollaboratorsTest"/>
-                    <include name="editEventNameTest"/>
-                    <include name="editEventCodeTest"/>
-                    <include name="editEventDateTest"/>
-                    <include name="copyEventLinkInSettingsTest"/>
-                    <include name="editLocationInSettingsTest"/>
-                </methods>
-            </class>
+<!--            <class name="org.example.slidopages.NewSlidoPageTest">-->
+<!--                <methods>-->
+<!--                    <include name="copySlidoEventLinkTest"/>-->
+<!--                    <include name="downloadSlidoEventQRCodeTest"/>-->
+<!--                    <include name="inviteCollaboratorsTest"/>-->
+<!--                    <include name="editEventNameTest"/>-->
+<!--                    <include name="editEventCodeTest"/>-->
+<!--                    <include name="editEventDateTest"/>-->
+<!--                    <include name="copyEventLinkInSettingsTest"/>-->
+<!--                    <include name="editLocationInSettingsTest"/>-->
+<!--                </methods>-->
+<!--            </class>-->
 <!--        <class name="org.example.slidopages.LivePollsTest">-->
 <!--            <methods>-->
 <!--                <include name="createWordCloudPollTest"/>-->
@@ -42,11 +42,11 @@
 <!--                    <include name="loginFailureTest"/>-->
 <!--                </methods>-->
 <!--            </class>-->
-<!--            <class name="org.example.slidopages.LogoutTest">-->
-<!--                <methods>-->
-<!--                    <include name="logoutTest"/>-->
-<!--                </methods>-->
-<!--            </class>-->
+            <class name="org.example.slidopages.LogoutTest">
+                <methods>
+                    <include name="logoutTest"/>
+                </methods>
+            </class>
 <!--            <class name="org.example.slidopages.TestingFromAdminPageTest">-->
 <!--                <methods>-->
 <!--                    <include name="testFromAdminPageTest"/>-->

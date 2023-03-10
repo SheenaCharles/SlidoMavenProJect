@@ -8,11 +8,17 @@ public class LoginPageTest extends BasicSetupPageTest {
     @Test(priority = 0)
     public void loginTest() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-        loginPage.doLogin(getEmail(), getPassword());
+        loginPage.doLogin();
     }
 
     @Test(priority = 1)
-    public void loginFailureTest() {
+    public void loginWithCredentialsTest() {
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        loginPage.doLoginWithCredentials(getEmail(), getPassword());
+    }
+
+    @Test(priority = 2)
+    public void loginWithWrongCredentialsTest() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         Assert.assertTrue(loginPage.doLoginWithWrongCredentials("abc@gmail.com", "123456"));
     }

@@ -57,16 +57,6 @@
                     <include name="deleteEventTest"/>
                 </methods>
             </class>
-            <class name="org.example.slidopages.LoginPageTest">
-                <methods>
-                    <exclude name="loginFailureTest"/>
-                </methods>
-            </class>
-            <class name="org.example.slidopages.LogoutTest">
-                <methods>
-                    <include name="logoutTest"/>
-                </methods>
-            </class>
             <class name="org.example.slidopages.TestingFromAdminPageTest">
                 <methods>
                     <include name="testFromAdminPageTest"/>
@@ -75,6 +65,11 @@
             <class name="org.example.slidopages.ScreenShotsTest">
                 <methods>
                     <include name="screenShotPageTest"/>
+                </methods>
+            </class>
+            <class name="org.example.slidopages.LogoutTest">
+                <methods>
+                    <include name="logoutTest"/>
                 </methods>
             </class>
         </classes>

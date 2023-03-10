@@ -152,6 +152,12 @@ public class EventCode extends BasicSetupPage {
     @FindBy(css = "form > div:nth-child(1) > div > div > div > div > div > div > div:nth-child(6) > div > svg > path")
     protected WebElement fifthStarRating;
 
+    @FindBy(css = "button[aria-label='Edit response']")
+    protected WebElement editResponse;
+
+    @FindBy(css = "#live-tabpanel-polls > div > div > div > form > div.poll__footer > div > button")
+    protected WebElement addResponse;
+
     public EventCode(WebDriver driver) {
         super(driver);
     }
@@ -185,6 +191,7 @@ public class EventCode extends BasicSetupPage {
 
     public boolean chooseAnswerOptionTwoInMultiChoicePollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         clickOnElement(answerOption2);
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
@@ -195,6 +202,7 @@ public class EventCode extends BasicSetupPage {
 
     public boolean chooseAnswerOptionThreeInMultiChoicePollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         clickOnElement(answerOption3);
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
@@ -205,6 +213,7 @@ public class EventCode extends BasicSetupPage {
 
     public boolean chooseAnswerOptionFourInMultiChoicePollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         clickOnElement(answerOption4);
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
@@ -231,6 +240,7 @@ public class EventCode extends BasicSetupPage {
 
     public boolean sendWordInWordCloudPollAsParticipantTwo(String slidoUrl, String eventCode, String word) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(addResponse);
         clickOnElement(wordCloudInput);
         enterText(wordCloudInput, word);
         clickOnElement(sendButtonInPoll);
@@ -250,11 +260,12 @@ public class EventCode extends BasicSetupPage {
 
     public boolean chooseAnswerOptionOneInQuizPollAsParticipant(String slidoUrl, String eventCode, String name) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
-        participantNameInput.sendKeys(name);
+        enterText(participantNameInput, name);
         clickOnElement(joinButton);
         pauseScreen();
         clickOnElement(quizAnswerOption1);
         clickOnElement(sendButtonInQuizPoll);
+        pauseScreen();
         switchToParentTab();
         pauseScreen();
         return firstChoosenAnswerInQuiz.isDisplayed();
@@ -262,9 +273,6 @@ public class EventCode extends BasicSetupPage {
 
     public boolean chooseAnswerOptionTwoInQuizPollAsParticipant(String slidoUrl, String eventCode, String name) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
-        participantNameInput.sendKeys(name);
-        clickOnElement(joinButton);
-        pauseScreen();
         clickOnElement(quizAnswerOption2);
         clickOnElement(sendButtonInQuizPoll);
         switchToParentTab();
@@ -275,9 +283,6 @@ public class EventCode extends BasicSetupPage {
 
     public boolean chooseAnswerOptionThreeInQuizPollAsParticipant(String slidoUrl, String eventCode, String name) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
-        participantNameInput.sendKeys(name);
-        clickOnElement(joinButton);
-        pauseScreen();
         clickOnElement(quizAnswerOption3);
         clickOnElement(sendButtonInQuizPoll);
         switchToParentTab();
@@ -297,6 +302,7 @@ public class EventCode extends BasicSetupPage {
         Actions act =  new Actions(driver);
         act.moveToElement(firstStarRating).click().build().perform();
         clickOnElement(sendButtonInPoll);
+        pauseScreen();
         switchToParentTab();
         pauseScreen();
         return highLightedStar1.isDisplayed();
@@ -304,10 +310,12 @@ public class EventCode extends BasicSetupPage {
 
     public boolean giveRatingTwoInRatingPollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         Actions act =  new Actions(driver);
         act.moveToElement(secondStarRating).click().build().perform();
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
+        pauseScreen();
         clickOnElement(secondSlidoEvent);
         pauseScreen();
         return highLightedStar2.isDisplayed();
@@ -315,10 +323,12 @@ public class EventCode extends BasicSetupPage {
 
     public boolean giveRatingThreeInRatingPollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         Actions act =  new Actions(driver);
         act.moveToElement(thirdStarRating).click().build().perform();
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
+        pauseScreen();
         clickOnElement(secondSlidoEvent);
         pauseScreen();
         return highLightedStar3.isDisplayed();
@@ -326,10 +336,12 @@ public class EventCode extends BasicSetupPage {
 
     public boolean giveRatingFourInRatingPollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         Actions act =  new Actions(driver);
         act.moveToElement(fourthStarRating).click().build().perform();
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
+        pauseScreen();
         clickOnElement(secondSlidoEvent);
         pauseScreen();
         return highLightedStar4.isDisplayed();
@@ -337,10 +349,12 @@ public class EventCode extends BasicSetupPage {
 
     public boolean giveRatingFiveInRatingPollAsParticipant(String slidoUrl, String eventCode) {
         enterEventCodeAsParticipantOne(slidoUrl, eventCode);
+        clickOnElement(editResponse);
         Actions act =  new Actions(driver);
         act.moveToElement(fifthStarRating).click().build().perform();
         clickOnElement(sendButtonInPoll);
         switchToParentTab();
+        pauseScreen();
         clickOnElement(secondSlidoEvent);
         pauseScreen();
         return highLightedStar5.isDisplayed();

@@ -133,6 +133,7 @@ public class LivePolls extends BasicSetupPage {
         clickOnElement(answerOption3Input);
         enterText(answerOption3Input, option3);
         clickOnElement(correctOption);
+        pauseScreen();
         clickOnElement(saveButton);
         pauseScreen();
         return driver.getPageSource().contains("Poll created.");
@@ -156,6 +157,7 @@ public class LivePolls extends BasicSetupPage {
         clickOnElement(createPollButton);
         clickOnElement(openTextOption);
         enterText(questionInput, question);
+        pauseScreen();
         clickOnElement(saveButton);
         pauseScreen();
         return driver.getPageSource().contains("Poll created.");
@@ -172,6 +174,7 @@ public class LivePolls extends BasicSetupPage {
         enterText(answerOption2Input, option2);
         clickOnElement(answerOption3Input);
         enterText(answerOption3Input, option3);
+        pauseScreen();
         clickOnElement(saveButton);
         pauseScreen();
         return driver.getPageSource().contains("Poll created.");

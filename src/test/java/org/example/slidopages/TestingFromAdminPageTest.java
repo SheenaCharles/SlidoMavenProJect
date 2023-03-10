@@ -8,7 +8,7 @@ public class TestingFromAdminPageTest extends BasicSetupPageTest {
     @Test
     public void testFromAdminPageTest() {
         TestingFromAdminAsParticipantModePage testingFromAdminPage = PageFactory.initElements(driver, TestingFromAdminAsParticipantModePage.class);
-        Assert.assertTrue(testingFromAdminPage.checkPollIsPresentInParticipantMode("How are you doing today"));
+        Assert.assertTrue(testingFromAdminPage.checkPollIsPresentInParticipantMode());
     }
 
     @Test

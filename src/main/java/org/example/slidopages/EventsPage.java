@@ -99,7 +99,7 @@ public class EventsPage extends BasicSetupPage {
     public boolean openEventInPresentMode() {
         clickOnElement(dropDownOptions);
         clickOnElement(presentModeOption);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+        pauseScreen();
         return driver.getPageSource().contains("#Digital123");
     }
 
